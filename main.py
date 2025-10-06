@@ -1,9 +1,12 @@
-name=10
-if name !=str:
-    raise Exception("not string")
-print("finsh") #not working
+"""
+this module for say hello 
+function
+"""
+def say_hello(name):
+    ''' function say hello
+    name=> come with argument
+    return => hello name
+    '''
+    return f"Hello {name}"
 
-n="zizo"
-if n != int:
-    raise ValueError("not a number")
-print("code not printing")
+print(say_hello("mido"))
