@@ -1,13 +1,16 @@
-"""
-this module for say hello 
-function
-"""
-def say_hello(name):
-    ''' function say hello
-    name=> come with argument
-    return => hello name
-    '''
-    return f"Hello {name}"
+def say_hello(name) -> str:
+    print(f"Hello {name}")
 
-print(say_hello("mido"))
-print(say_hello.__doc__)
+say_hello("hassan")
+
+def calc(n1,n2) -> int:
+    print(n1+n2)
+
+calc(10,20)
+
+def lst(*nums) -> list:
+    print(nums)
+
+
+lst(list(["hassan","zizo"]))
+print(type(lst))
