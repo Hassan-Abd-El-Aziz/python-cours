@@ -1,13 +1,20 @@
 import re
-inp_email=input("write your email : ")
-seEmail=re.findall(r"[A-z0-9\.]+@[A-z0-9]+\.[A-z]+",inp_email)
-lst=[]
+my_string="I Love pythone"
+search_string=re.split(r"\s",my_string,1)
+print(search_string)
 
-if seEmail !=[]:
-    lst.append(seEmail)
-    print("Email Added")
-else:
-    print("Invalid mail")
+strng_two="I_Love-you_pythone-and_A-js"
+search_two=re.split(r"-|_",strng_two)
+print(search_two)
 
-for m in lst:
-    print(m)
+for count,word in enumerate(search_two,1):
+    if len(word)==1:
+        continue
+    print(f"word num: {count} is {word}")
+
+print("*" *70)
+
+string_three="I_love_you_somuch"
+search_three=re.sub(r"_"," $ ",string_three)
+
+print(search_three)
