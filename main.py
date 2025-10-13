@@ -1,19 +1,13 @@
-my_file=None
-my_tries=5
-while my_tries >0:
-    try:
-        print(f"you have {my_tries} tries left")
-        files=(input("enter your path file => :").strip())
-        my_file=open(files,"r")
-        print(my_file.read())
-        break
-    except FileNotFoundError:
-        print("file not found ")
-        my_tries -=1
-    except:
-        print("error happens")
-    finally:
-        my_file.close()
-        print("file closed")
+import re
+inp_email=input("write your email : ")
+seEmail=re.findall(r"[A-z0-9\.]+@[A-z0-9]+\.[A-z]+",inp_email)
+lst=[]
+
+if seEmail !=[]:
+    lst.append(seEmail)
+    print("Email Added")
 else:
-    print("end tries")
+    print("Invalid mail")
+
+for m in lst:
+    print(m)
