@@ -1,38 +1,21 @@
-class Member:
-    not_allawed_names=["hima","figo"]
-    users_num=0
+class Food:
+    def __init__(self,name,price):
+        self.name=name
+        self.price=price
+    def eate(self):
+        print(f"your food is {self.name} and the price is {self.price}")
+
+class Apple(Food):
+    def __init__(self,name,price,amount):
+        super().__init__(name,price)
+        self.amount=amount
+    def say(self):
+        print(f"{self.name} - {self.price} - {self.amount}")
 
 
-    @classmethod 
-    def show_user_count(cls):
-        return f"number of users {cls.users_num}"
-    @staticmethod
-    def say_good():
-        return 'good mornning'
+food_one=Food("pizza",150)
+food_one.eate()
 
-
-    def __init__(self,firstName,lastName):
-        self.fname=firstName
-        self.lname=lastName
-        Member.users_num +=1
-    def say_hello(self):
-        return f"Hello {self.fname}"
-    def delete_user(self):
-        Member.users_num -=1
-        print(f"user {self.fname} is deleted")
-
-
-uOne=Member("Hassan","zizo")
-uTwo=Member("ahmed","hassan")
-uthree=Member("hima","figo")
-
-
-print(Member.users_num)
-
-print(uOne.say_hello())      
-print(uTwo.say_hello())      
-print(uthree.say_hello())    
-
-print(Member.users_num)
-print(Member.show_user_count())
-print(Member.say_good())
+apple=Apple("onion",50,500)
+apple.say()
+apple.eate()
