@@ -1,21 +1,16 @@
-class Food:
-    def __init__(self,name,price):
-        self.name=name
-        self.price=price
-    def eate(self):
-        print(f"your food is {self.name} and the price is {self.price}")
+from abc import ABCMeta,abstractmethod
 
-class Apple(Food):
-    def __init__(self,name,price,amount):
-        super().__init__(name,price)
-        self.amount=amount
-    def say(self):
-        print(f"{self.name} - {self.price} - {self.amount}")
+class programin(metaclass=ABCMeta):
+    @abstractmethod
+    def has_oop(self):
+        pass
+    def goo(self):
+        return "good"
+class python(programin):
+    def has_oop(self):
+        return "Yes"
 
 
-food_one=Food("pizza",150)
-food_one.eate()
-
-apple=Apple("onion",50,500)
-apple.say()
-apple.eate()
+one=python()
+print(one.has_oop())
+print(one.goo())
