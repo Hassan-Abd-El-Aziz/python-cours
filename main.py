@@ -1,111 +1,83 @@
-h="I love you Hassan"
+i=100
+f=100.7
+com=5+6j
 
-print(h.index("n"))
-print(h.startswith("H",11))
-print(h.endswith("n",16))
-print(h.swapcase())
+print(type(i))
+print(type(f))
+print(type(com))
 
-print(h.split())
-print(h.rsplit(" ",2))
+print(com.real)
+print(com.imag)
 
-print(h.center(50,"#"))
-print(h.find("ss"))
+print(int(f))
 
-print("*" *50)
+# Arithmetic oprator
+print(10+5)# addition
+print(100-50)# subtraction
+print(10*2)# multiplication
+print(20/2)# division
+print(9%2)# modulues
+print(5**3)#exponent
+print(140//20)# floor division
 
-a,b,c,z="1","11","111","1111"
-print(a.zfill(4))
-print(b.zfill(4))
-print(a.zfill(4))
-print(a.zfill(4))
+# lists
 
-print("*" *50)
+mylist=[1,"one",2,"two",3,"three"]
+print(mylist)
+mylist[0:2]=[1]
+print(mylist)
+mylist[1:2]=[2]
+print(mylist)
+mylist[2:3]=[3]
+print(mylist)
+mylist[3:4]=[4]
+print(mylist)
+mylist[4:]=["non"]
+print(mylist)
 
-name="zizo"
+print("#" *50)
 
-print(name.ljust(10,"@"))
-print(name.rjust(10,"#"))
+lstone=["one","two","three"]
+lstTwo=["four","five"]
+lstone.append(1)
+lstone.append(lstTwo)
+print(lstone)
+print(lstone[4][1])
 
+a=[1,2,3]
+b=[6,4,5]
+c=["one","two"]
 
-e='''hi hassan,
-ilove python
-and i love js
-'''
-print(e.splitlines())
-s=e.splitlines()
-for a in s :
-    print(a)
+b.extend(c)
 
-print("*" *50)
+a.extend(b)
+print(a)
 
-txt="heloo\thassan\tilove\tyou"
-print(txt)
-print(txt.expandtabs(2))
+x=["A","B","C","D","A"]
+x.remove("A")
+print(x)
 
-print("*" *50)
+d=[5,1,3,6,2,4,0]
+d.sort()
+print(d)
+d.reverse()
+print(d)
+z=d.copy()
+d.clear()
+print(d)
+print(z)
+z.sort()
+print(z)
+z.reverse()
+print(z)
 
-tst="I Need 5G"
-print(tst.istitle())#true
-tst="I need 5g"
-print(tst.istitle())#false
-print("*" *50)
+nm=[1,2,1,3,4,1,2,1,2,3,4]
+print(nm.count(1))
 
-sps=" "
-print(sps.isspace())
-print("*" *50)
+print(nm.index(4))
 
+nm.insert(2,"test")
+print(nm)
 
-l="ilove"
-print(l.islower())
-print(l.isalpha())
-
-
-idn="hass_n"
-idn2="hass-n"
-print(idn.isidentifier())
-print(idn2.isidentifier())
-
-alln="h33loz1zo"
-
-print(alln.isalnum())
-
-
-var="one two one two three two three one "
-
-print(var.replace("one","1"))
-print(var.replace("two","2",1))
-print(var.replace("three","3",2))
-
-lst=["one","two","three","four"]
-print(lst)
-print("-".join(lst))
-print(" ".join(lst))
-print("*" *50)
-
-nam="hassan"
-age=62
-rate=1.5458
-
-# old_formating
-print("wellcome %s" % nam)
-print("Hello %s your age is %d" % (nam,age))
-print("hi %.3s age is %d" % (nam,age))
-print("hi %.3s age is %d rate is %.2f" % (nam,age,rate))
-
-# new_formating
-print("wellcom {:s}".format(nam))
-print("Hello {:s} your age is {:d}".format(nam,age))
-print("hi {:.3s} your age is {:d} rate is {:.3f}".format(nam,age,rate))
-
-
-format_mony=15454654654564
-print("your mony in bank is {:,d}" .format(format_mony))
-
-a,b,c="one","two","three"
-print("{2:s}, {1:s} , {0:s}" .format(a,b,c))
-
-# last New Formating
-skill=["Html","css","js"]
-
-for k,s in enumerate(skill):
-    print(f"skill {k + 1} => is {s.capitalize()}")
+s=[1,2,"A","b"]
+print(s.pop(2))
