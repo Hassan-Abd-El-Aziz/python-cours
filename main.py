@@ -1,83 +1,85 @@
-i=100
-f=100.7
-com=5+6j
+#Dictionary
 
-print(type(i))
-print(type(f))
-print(type(com))
+user={"name":"hassan","salary":50000,"avilabel":True}
 
-print(com.real)
-print(com.imag)
 
-print(int(f))
+print(user.keys())
+print(user.values())
+print(user.get("name"))
+print(user.get("salary"))
 
-# Arithmetic oprator
-print(10+5)# addition
-print(100-50)# subtraction
-print(10*2)# multiplication
-print(20/2)# division
-print(9%2)# modulues
-print(5**3)#exponent
-print(140//20)# floor division
+if user.get("avilabel")==True:
+    print(f"well come {user['name']}")
 
-# lists
 
-mylist=[1,"one",2,"two",3,"three"]
-print(mylist)
-mylist[0:2]=[1]
-print(mylist)
-mylist[1:2]=[2]
-print(mylist)
-mylist[2:3]=[3]
-print(mylist)
-mylist[3:4]=[4]
-print(mylist)
-mylist[4:]=["non"]
-print(mylist)
+skills={"one":{"name":"html","progres":"90%"}}
+skills2={"two":{"name":"css","progres":"85%"}}
+print("*" *70)
 
-print("#" *50)
+print(skills)
+print(skills.get("one").get("name"))
+print(skills['one']['progres'])
 
-lstone=["one","two","three"]
-lstTwo=["four","five"]
-lstone.append(1)
-lstone.append(lstTwo)
-print(lstone)
-print(lstone[4][1])
+allskills={"langOne":skills,"langTwo":skills2}
 
-a=[1,2,3]
-b=[6,4,5]
-c=["one","two"]
+print(allskills)
 
-b.extend(c)
+#methods
+allskills.clear()
+print(allskills)
+allskills.update({"one":"html"})
+allskills['one']="css"
+print(allskills)
+allskills.update({"two":"html"})
+print(allskills)
 
-a.extend(b)
+call=allskills.copy()
+call.update({"three":"javascript"})
+allskills.clear()
+print(allskills)
+print(call)
+
+
+print(call.popitem())
+
+
+print("*" *50)
+a={"one":None,"t":15}
+print(a)
+print(a.setdefault("zizo",55))
 print(a)
 
-x=["A","B","C","D","A"]
-x.remove("A")
-print(x)
+print("*" *50)
 
-d=[5,1,3,6,2,4,0]
-d.sort()
-print(d)
-d.reverse()
-print(d)
-z=d.copy()
-d.clear()
-print(d)
-print(z)
-z.sort()
-print(z)
-z.reverse()
-print(z)
+viw={"one":"lst1","two":"lst2"}
+lls=viw.items()
+viw['three']="lst3"
+print(lls)
+print(viw)
 
-nm=[1,2,1,3,4,1,2,1,2,3,4]
-print(nm.count(1))
+for ls in lls:
+    print(f"key: {ls[0]} value is {ls[1]}")
 
-print(nm.index(4))
+va=("one","two","three")
+b="x"
+print(dict.fromkeys(va,b))
 
-nm.insert(2,"test")
-print(nm)
+print(bool(''))
+print(bool('1'))
 
-s=[1,2,"A","b"]
-print(s.pop(2))
+
+age=10
+cun="EG"
+rank=10
+
+print(cun=="EG" and age >5 and rank >3)
+print(cun=="EG" and age >5 and rank >11)
+
+print(cun=="EG" or age >5 or rank >3)
+print(cun=="EG" or age >15 or rank >11)
+
+print(not age >50)
+
+x=10
+x+=10
+print(str(x))
